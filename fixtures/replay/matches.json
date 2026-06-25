@@ -1,0 +1,58 @@
+[
+  {
+    "matchId": "pm-normal-001",
+    "competitionId": "worldcup-2026-demo",
+    "competitionName": "World Cup Synthetic Replay",
+    "kickoffUtc": "2026-06-18T19:00:00Z",
+    "status": "finished",
+    "homeTeam": "Northbridge",
+    "awayTeam": "Harbor City",
+    "homeScore": 2,
+    "awayScore": 0,
+    "minute": 90,
+    "updatedAtUtc": "2026-06-18T20:55:00Z",
+    "sourceMode": "replay"
+  },
+  {
+    "matchId": "pm-late-goal-002",
+    "competitionId": "worldcup-2026-demo",
+    "competitionName": "World Cup Synthetic Replay",
+    "kickoffUtc": "2026-06-19T21:00:00Z",
+    "status": "finished",
+    "homeTeam": "Metro United",
+    "awayTeam": "Coastal FC",
+    "homeScore": 2,
+    "awayScore": 1,
+    "minute": 90,
+    "updatedAtUtc": "2026-06-19T22:58:34Z",
+    "sourceMode": "replay"
+  },
+  {
+    "matchId": "pm-correction-003",
+    "competitionId": "worldcup-2026-demo",
+    "competitionName": "World Cup Synthetic Replay",
+    "kickoffUtc": "2026-06-20T16:00:00Z",
+    "status": "finished",
+    "homeTeam": "Capital SC",
+    "awayTeam": "Lakeside",
+    "homeScore": 1,
+    "awayScore": 1,
+    "minute": 90,
+    "updatedAtUtc": "2026-06-20T17:54:11Z",
+    "sourceMode": "replay"
+  },
+  {
+    "matchId": "pm-suspended-004",
+    "competitionId": "worldcup-2026-demo",
+    "competitionName": "World Cup Synthetic Replay",
+    "kickoffUtc": "2026-06-21T18:00:00Z",
+    "status": "suspended",
+    "homeTeam": "Summit XI",
+    "awayTeam": "River Plate Demo",
+    "homeScore": 0,
+    "awayScore": 0,
+    "minute": 37,
+    "updatedAtUtc": "2026-06-21T18:44:05Z",
+    "sourceMode": "replay"
+  }
+]

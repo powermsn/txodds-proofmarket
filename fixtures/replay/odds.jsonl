@@ -1,0 +1,5 @@
+{"quoteId":"odds-normal-1","matchId":"pm-normal-001","marketType":"match_winner","selection":"Northbridge","decimalOdds":1.42,"impliedProbability":0.7042,"updatedAtUtc":"2026-06-18T20:51:00Z"}
+{"quoteId":"odds-late-1","matchId":"pm-late-goal-002","marketType":"total_goals","selection":"Over 2.5","decimalOdds":8.4,"impliedProbability":0.119,"previousDecimalOdds":2.1,"movementBps":-1800,"updatedAtUtc":"2026-06-19T22:48:02Z"}
+{"quoteId":"odds-late-2","matchId":"pm-late-goal-002","marketType":"total_goals","selection":"Over 2.5","decimalOdds":1.03,"impliedProbability":0.9709,"previousDecimalOdds":8.4,"movementBps":8519,"updatedAtUtc":"2026-06-19T22:58:00Z"}
+{"quoteId":"odds-correction-1","matchId":"pm-correction-003","marketType":"match_winner","selection":"Lakeside","decimalOdds":1.08,"impliedProbability":0.9259,"previousDecimalOdds":1.7,"movementBps":3650,"updatedAtUtc":"2026-06-20T17:52:44Z"}
+{"quoteId":"odds-suspended-1","matchId":"pm-suspended-004","marketType":"match_winner","selection":"Summit XI","decimalOdds":2.32,"impliedProbability":0.431,"updatedAtUtc":"2026-06-21T18:42:10Z"}

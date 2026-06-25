@@ -1,0 +1,182 @@
+{
+  "generatedFor": "ProofMarket public replay demo",
+  "dataPolicy": "Synthetic fixture data only. No raw TxODDS API responses are included.",
+  "scenarios": [
+    {
+      "id": "normal-full-time",
+      "title": "Normal full-time result",
+      "matchId": "pm-normal-001",
+      "disputedStat": "full_time_score",
+      "market": {
+        "marketId": "mkt-normal-winner",
+        "type": "match_winner",
+        "selection": "Northbridge",
+        "status": "settled",
+        "settlementState": "settled_cleanly",
+        "question": "Does Northbridge win at full time?"
+      },
+      "previousReceipt": null,
+      "finalReceipt": {
+        "receiptId": "replay-proof-normal-final",
+        "matchId": "pm-normal-001",
+        "statKey": "full_time_score",
+        "statValue": "2-0",
+        "merkleRoot": "synthetic-normal-root",
+        "merkleProof": ["normal-leaf-a", "normal-leaf-b"],
+        "txSignature": "replay://settlement/normal-full-time",
+        "slot": 100001,
+        "verified": true,
+        "verifiedAtUtc": "2026-06-18T20:55:06Z",
+        "verificationMode": "replay_fixture"
+      },
+      "trace": [
+        {"label":"Market created","status":"verified","timestampUtc":"2026-06-18T18:00:00Z","sourceMode":"replay","details":"Synthetic match-winner market opened for replay."},
+        {"label":"Match finished","status":"verified","timestampUtc":"2026-06-18T20:55:00Z","sourceMode":"replay","details":"Full-time score received as 2-0."},
+        {"label":"Proof verified","status":"verified","timestampUtc":"2026-06-18T20:55:06Z","sourceMode":"replay","details":"Replay receipt confirms final score."},
+        {"label":"Replay settlement executed","status":"verified","timestampUtc":"2026-06-18T20:55:08Z","sourceMode":"replay","details":"Simulated accounting settled the market."}
+      ],
+      "accounting": [
+        {"account":"Northbridge shares","delta":"+100 simulated credits","reason":"Selected full-time winner verified."},
+        {"account":"Opposing shares","delta":"-100 simulated credits","reason":"Selection did not match verified result."}
+      ]
+    },
+    {
+      "id": "late-goal-dispute",
+      "title": "Late goal dispute",
+      "matchId": "pm-late-goal-002",
+      "disputedStat": "full_time_score",
+      "market": {
+        "marketId": "mkt-late-over",
+        "type": "total_goals",
+        "selection": "Over 2.5",
+        "status": "settled",
+        "settlementState": "settled_after_correction",
+        "question": "Does the match finish with over 2.5 total goals?"
+      },
+      "previousReceipt": {
+        "receiptId": "replay-proof-late-goal-pre",
+        "matchId": "pm-late-goal-002",
+        "statKey": "full_time_score",
+        "statValue": "1-1",
+        "merkleRoot": "synthetic-late-pre-root",
+        "merkleProof": ["late-pre-leaf-a", "late-pre-leaf-b"],
+        "txSignature": "replay://settlement/late-goal/pre",
+        "slot": 100210,
+        "verified": true,
+        "verifiedAtUtc": "2026-06-19T22:54:08Z",
+        "verificationMode": "replay_fixture"
+      },
+      "finalReceipt": {
+        "receiptId": "replay-proof-late-goal-final",
+        "matchId": "pm-late-goal-002",
+        "statKey": "full_time_score",
+        "statValue": "2-1",
+        "merkleRoot": "synthetic-late-final-root",
+        "merkleProof": ["late-final-leaf-a", "late-final-leaf-b"],
+        "txSignature": "replay://settlement/late-goal/final",
+        "slot": 100257,
+        "verified": true,
+        "verifiedAtUtc": "2026-06-19T22:58:04Z",
+        "verificationMode": "replay_fixture"
+      },
+      "trace": [
+        {"label":"Market created","status":"verified","timestampUtc":"2026-06-19T20:30:00Z","sourceMode":"replay","details":"Total-goals market opened before kickoff."},
+        {"label":"Odds shock detected","status":"verified","timestampUtc":"2026-06-19T22:48:04Z","sourceMode":"replay","details":"Replay odds moved sharply against over 2.5 goals."},
+        {"label":"Match appeared final","status":"verified","timestampUtc":"2026-06-19T22:54:05Z","sourceMode":"replay","details":"Initial full-time state showed 1-1."},
+        {"label":"Settlement paused","status":"pending","timestampUtc":"2026-06-19T22:54:07Z","sourceMode":"replay","details":"ProofMarket detected a dispute window after the odds shock."},
+        {"label":"Updated proof requested","status":"verified","timestampUtc":"2026-06-19T22:58:00Z","sourceMode":"replay","details":"Late stoppage-time goal arrived and a fresh receipt was requested."},
+        {"label":"Proof verified","status":"verified","timestampUtc":"2026-06-19T22:58:04Z","sourceMode":"replay","details":"Replay receipt confirms the corrected full-time score is 2-1."},
+        {"label":"Replay settlement executed","status":"verified","timestampUtc":"2026-06-19T22:58:08Z","sourceMode":"replay","details":"Over 2.5 resolves yes in simulated outcome accounting."}
+      ],
+      "accounting": [
+        {"account":"Yes shares","delta":"+100 simulated credits","reason":"Corrected score has three total goals."},
+        {"account":"No shares","delta":"-100 simulated credits","reason":"Pre-correction 1-1 receipt was superseded."}
+      ]
+    },
+    {
+      "id": "score-correction",
+      "title": "Score correction",
+      "matchId": "pm-correction-003",
+      "disputedStat": "full_time_score",
+      "market": {
+        "marketId": "mkt-correction-away",
+        "type": "match_winner",
+        "selection": "Lakeside",
+        "status": "disputed",
+        "settlementState": "paused_for_correction",
+        "question": "Does Lakeside win at full time?"
+      },
+      "previousReceipt": {
+        "receiptId": "replay-proof-correction-pre",
+        "matchId": "pm-correction-003",
+        "statKey": "full_time_score",
+        "statValue": "1-2",
+        "merkleRoot": "synthetic-correction-pre-root",
+        "merkleProof": ["correction-pre-leaf"],
+        "txSignature": "replay://settlement/correction/pre",
+        "slot": 100501,
+        "verified": true,
+        "verifiedAtUtc": "2026-06-20T17:52:50Z",
+        "verificationMode": "replay_fixture"
+      },
+      "finalReceipt": {
+        "receiptId": "replay-proof-correction-final",
+        "matchId": "pm-correction-003",
+        "statKey": "full_time_score",
+        "statValue": "1-1",
+        "merkleRoot": "synthetic-correction-final-root",
+        "merkleProof": ["correction-final-leaf"],
+        "txSignature": "replay://settlement/correction/final",
+        "slot": 100528,
+        "verified": true,
+        "verifiedAtUtc": "2026-06-20T17:54:16Z",
+        "verificationMode": "replay_fixture"
+      },
+      "trace": [
+        {"label":"Market created","status":"verified","timestampUtc":"2026-06-20T15:00:00Z","sourceMode":"replay","details":"Away-winner market opened for synthetic replay."},
+        {"label":"Score correction received","status":"verified","timestampUtc":"2026-06-20T17:54:11Z","sourceMode":"replay","details":"Synthetic correction changed the score from 1-2 to 1-1."},
+        {"label":"Settlement paused","status":"pending","timestampUtc":"2026-06-20T17:54:12Z","sourceMode":"replay","details":"Market remains disputed until the updated receipt is reviewed."}
+      ],
+      "accounting": [
+        {"account":"Lakeside shares","delta":"0 simulated credits","reason":"Settlement paused because the correction removes the away win."},
+        {"account":"Draw-side reserve","delta":"held","reason":"Trace shows how locked accounting would wait for operator review."}
+      ]
+    },
+    {
+      "id": "suspended-match",
+      "title": "Suspended match",
+      "matchId": "pm-suspended-004",
+      "disputedStat": "match_status",
+      "market": {
+        "marketId": "mkt-suspended-winner",
+        "type": "match_winner",
+        "selection": "Summit XI",
+        "status": "disputed",
+        "settlementState": "void_pending_policy",
+        "question": "Does Summit XI win at full time?"
+      },
+      "previousReceipt": null,
+      "finalReceipt": {
+        "receiptId": "replay-proof-suspended",
+        "matchId": "pm-suspended-004",
+        "statKey": "match_status",
+        "statValue": "suspended",
+        "merkleRoot": "synthetic-suspended-root",
+        "merkleProof": ["suspended-leaf"],
+        "txSignature": "replay://settlement/suspended",
+        "slot": 100833,
+        "verified": true,
+        "verifiedAtUtc": "2026-06-21T18:44:10Z",
+        "verificationMode": "replay_fixture"
+      },
+      "trace": [
+        {"label":"Market created","status":"verified","timestampUtc":"2026-06-21T17:00:00Z","sourceMode":"replay","details":"Market opened before kickoff."},
+        {"label":"Match suspended","status":"verified","timestampUtc":"2026-06-21T18:44:05Z","sourceMode":"replay","details":"Replay status changed to suspended."},
+        {"label":"Settlement blocked","status":"replay_only","timestampUtc":"2026-06-21T18:44:10Z","sourceMode":"replay","details":"No winner settlement is executed for a suspended match."}
+      ],
+      "accounting": [
+        {"account":"All simulated positions","delta":"held","reason":"Policy review required before void or resume."}
+      ]
+    }
+  ]
+}
