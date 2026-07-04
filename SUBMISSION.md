@@ -74,4 +74,4 @@ This is a hackathon demo using TxLINE-style World Cup football data. It does not
 - Live TxLINE API wiring is documented as the next adapter step, not claimed as complete.
 - No real-money settlement, custody, wallet connection, KYC, or legal wagering flow is implemented.
 - The ledger uses deterministic simulated credits only.
-- Public deployment URL, demo video URL, and public repo URL must be replaced before final Superteam submission.
+- Demo video URL must be replaced before final Superteam submission.
