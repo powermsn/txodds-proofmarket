@@ -8,6 +8,12 @@ Prediction Markets and Settlement.
 
 ProofMarket is settlement you can replay: it shows how a disputed football market moves from a frozen result, to a TxLINE-style proof receipt, to a corrected simulated settlement ledger.
 
+## Submission Links
+
+- Live app URL: https://txodds-proofmarket.vercel.app
+- Demo video URL: https://www.youtube.com/watch?v=NIlIVfiTrm4
+- Public repo URL: https://github.com/powermsn/txodds-proofmarket
+
 ## What Judges Should Click
 
 Open the app and click `Run settlement replay`.
@@ -74,4 +80,3 @@ This is a hackathon demo using TxLINE-style World Cup football data. It does not
 - Live TxLINE API wiring is documented as the next adapter step, not claimed as complete.
 - No real-money settlement, custody, wallet connection, KYC, or legal wagering flow is implemented.
 - The ledger uses deterministic simulated credits only.
-- Demo video URL must be replaced before final Superteam submission.

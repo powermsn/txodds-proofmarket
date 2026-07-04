@@ -7,7 +7,7 @@ ProofMarket: settlement you can replay. It turns TxLINE-style match data into ve
 ## Final Submission Checklist
 
 - Live app URL: https://txodds-proofmarket.vercel.app
-- Demo video URL: pending recording
+- Demo video URL: https://www.youtube.com/watch?v=NIlIVfiTrm4
 - Public repo URL: https://github.com/powermsn/txodds-proofmarket
 - Default mode: replay demo mode
 - Main CTA: `Run settlement replay`

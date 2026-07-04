@@ -86,4 +86,4 @@ The future live adapter should use official TxLINE endpoint families:
 - No Solana program or devnet transaction is required for the main demo.
 - The UI shows deterministic simulated accounting, not legal or financial settlement.
 - Scenario data is synthetic and intentionally small for public repo safety.
-- Live deployment URL, public repo URL, and demo video URL are placeholders until release.
+- Live deployment, public repo, and demo video links are recorded in the root README and submission notes.
