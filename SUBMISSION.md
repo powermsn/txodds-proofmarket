@@ -10,12 +10,12 @@ ProofMarket is settlement you can replay: it shows how a disputed football marke
 
 ## What Judges Should Click
 
-Open the app and click `Replay late-goal settlement`.
+Open the app and click `Run settlement replay`.
 
 That path shows the core product in under 90 seconds:
 
 1. A disputed total-goals market is frozen on a previous `1-1` receipt.
-2. The proof lifecycle advances through proof requested, previous receipt, proof verified, and settlement executed.
+2. The proof lifecycle advances through Frozen, TxLINE proof requested, Receipt verified, Diff explained, and Settlement executed.
 3. The receipt diff shows the corrected `2-1` final settlement.
 4. The simulated ledger resolves: `Over 2.5 wins +100 simulated credits` and `No shares -100 simulated credits`.
 

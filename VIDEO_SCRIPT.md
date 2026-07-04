@@ -13,16 +13,18 @@ Narration:
 Point at:
 
 - `Replay demo mode`
+- `Live TxLINE: not configured`
+- `Replay active`
 - `PREVIOUS RECEIPT 1-1`
 - `Simulation only. No real-money wagering.`
 
 ## 0:20-0:45 - Run The Judge Path
 
-Click `Replay late-goal settlement`.
+Click `Run settlement replay`.
 
 Narration:
 
-> The product advances through the proof lifecycle: proof requested, previous receipt, proof verified, and settlement executed. The demo uses public synthetic replay fixtures, so it can be evaluated without a TxLINE token, wallet, payment, login, or hidden secret.
+> The product advances through the proof lifecycle: Frozen, TxLINE proof requested, Receipt verified, Diff explained, and Settlement executed. The demo uses public synthetic replay fixtures, so it can be evaluated without a TxLINE token, wallet, payment, login, or hidden secret.
 
 Point at:
 
@@ -82,5 +84,5 @@ Narration:
 Close with:
 
 - Track: Prediction Markets and Settlement
-- Main CTA: `Replay late-goal settlement`
+- Main CTA: `Run settlement replay`
 - Replay-first judge path

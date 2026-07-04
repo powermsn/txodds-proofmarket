@@ -10,7 +10,7 @@ ProofMarket: settlement you can replay. It turns TxLINE-style match data into ve
 - Demo video URL: pending recording
 - Public repo URL: pending publication
 - Default mode: replay demo mode
-- Main CTA: `Replay late-goal settlement`
+- Main CTA: `Run settlement replay`
 - Superteam project description: see `SUBMISSION.md`
 - Recording script: see `VIDEO_SCRIPT.md`
 - Deployment steps: see `DEPLOYMENT.md`
@@ -32,17 +32,18 @@ Replay mode is the primary judge path and does not require a TxLINE token, walle
 
 1. Open the app.
 2. Confirm the banner says `Replay demo mode`.
-3. Click `Replay late-goal settlement`.
-4. Read the verdict strip: `PREVIOUS RECEIPT 1-1 -> TXLINE PROOF VERIFIED -> FINAL SETTLEMENT 2-1`.
-5. Review the proof lifecycle: proof requested, previous receipt, proof verified, settlement executed.
-6. Inspect the receipt fields and summary block.
-7. Compare the receipt diff for the late-goal score correction.
-8. Review the corrected simulated ledger.
+3. Point at the evidence strip: `Live TxLINE: not configured`, `Replay active`, and `Fixture source: replay`.
+4. Click `Run settlement replay`.
+5. Read the verdict strip: `PREVIOUS RECEIPT 1-1 -> TXLINE PROOF VERIFIED -> FINAL SETTLEMENT 2-1`.
+6. Review the proof lifecycle: Frozen, TxLINE proof requested, Receipt verified, Diff explained, Settlement executed.
+7. Inspect the receipt fields and summary block.
+8. Compare the receipt diff for the late-goal score correction.
+9. Review the corrected simulated ledger.
 
 ## 3-5 Minute Demo Path
 
 - `0:00` Dispute: show the frozen market and the previous `1-1` receipt.
-- `0:45` Proof diff: click `Replay late-goal settlement`, then show TxLINE proof verified and the `1-1 -> 2-1` receipt diff.
+- `0:45` Proof diff: click `Run settlement replay`, then show TxLINE proof verified and the `1-1 -> 2-1` receipt diff.
 - `1:30` Settlement ledger: show `Over 2.5 wins +100 simulated credits` and `No shares -100 simulated credits`.
 - `2:15` Fallback/compliance: show replay mode, synthetic fixtures, no required token/wallet, and simulation-only compliance.
 
